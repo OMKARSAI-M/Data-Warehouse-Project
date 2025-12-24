@@ -68,6 +68,7 @@ The dimensional model uses **4 dimension tables**:
 - `dim_film`
 - `dim_store`
 - `dim_inventory`
+![dim_model](dim_model.png)
 
 ### Fact Table
 
@@ -80,6 +81,7 @@ The dimensional model uses **4 dimension tables**:
 ### 🧍 dim_customer
 
 Stores customer-level attributes:
+![schema](schema.png)
 
 - `customer_key` (surrogate key)  
 - `customer_id`  
@@ -161,7 +163,7 @@ Captures the **rental transaction grain**:
 ## 🏛️ Data Warehouse Architecture
 
 The solution leverages **Azure** and **Power BI** to implement a modern cloud-based data warehouse:
-
+![warehouse_architect](warehouse_architect.png)
 1. **Data Sources**
    - CSV files stored in **Azure Blob Storage** (DVD Rentals dataset)
 
@@ -232,27 +234,31 @@ Example pipeline design (names as used in Azure):
    - Stacked bar chart  
    - Shows inventory count per film category  
    - Identifies overstocked and understocked genres
+    ![viz_1](viz_1.png)
 
 2. **Rental Duration by Category**  
    - Area chart  
    - Aggregated rental duration per category  
    - Highlights genres with longest engagement time
+   - ![viz_2](viz_2.png)
 
 3. **Rental Count by Country**  
    - Pie chart / map visualization  
    - Compares rental volume across countries  
    - Supports regional marketing and stocking decisions
+     ![viz_3](viz_3.png)
 
 4. **Rental Amount by Category**  
    - Treemap  
    - Shows revenue contribution by genre  
    - Helps prioritize profitable categories
+    ![viz_4](viz_4.png)
 
 5. **Average Replacement Cost by Category**  
    - Line chart  
    - Displays average replacement cost per genre  
    - Useful for budgeting and inventory risk assessment
-
+  ![viz_5](viz_5.png)
 ---
 
 ### 👥 Employee Dashboards (Customer & Film Insights)
@@ -261,16 +267,16 @@ Example pipeline design (names as used in Azure):
    - Table of top-spending customers  
    - Includes customer ID, name, and total rental amount  
    - Supports loyalty programs and targeted promotions
-
+![viz_6](viz_6.png)
 2. **Top Rented Films**  
    - Horizontal bar chart  
    - Lists top 10 most rented titles  
    - Helps identify high-demand films and guide purchasing decisions
-
+![viz_7](viz_7.png)
 3. **Rental Trends by Film Rating** (optional view)  
    - Visualizes rental counts by MPAA rating (e.g., PG, PG-13, R)  
    - Assists in understanding audience preferences.
-
+![viz_8](viz_8.png)
 ---
 
 ## ✅ Outcomes & Conclusion
